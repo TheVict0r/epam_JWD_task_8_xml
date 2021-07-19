@@ -16,39 +16,61 @@ body {
 }
 </style>
 
+
 </head>
 <body>
 	<h1>EPAM JWD - Task 8. XML-file verification and parsing</h1>
-	<h2><em>Mobile phone company tariffs</em></h2>
-	<br>
+	<h2>
+		<em>Mobile phone company tariffs</em>
+	</h2>
+	<br/>
+	
+	<p><em>Step 1.</em> Upload the <strong>XML</strong> file</p>
+	
+	<form action="controller" method="POST" enctype="multipart/form-data">
+		<input type="hidden" name="uploadfile" value="XML" />
+		File: <input type="file" name="file" id="file" accept=".xml"/> 
+		<br /> Enter the destination folder: <input type="text" value="/folder" name="destination" />
+		<br /> <input type="submit" value="Upload" name="upload" id="upload" />
+	</form>
+	<br/>
+
+	
+	<p><em>Step 2.</em> Upload the <strong>XSD-schema</strong> file</p>
+	
+	<form action="controller" method="POST" enctype="multipart/form-data">
+		<input type="hidden" name="uploadfile" value="XSD" />
+		File: <input type="file" name="file" id="file" accept=".xsd"/> 
+		<br /> Enter the destination folder: <input type="text" value="/folder" name="destination" />
+		<br /> <input type="submit" value="Upload" name="upload" id="upload" />
+	</form>
 
 
+	<br />
 	<form action="controller" method="get">
 		<input type="hidden" name="validate" value="perform_validation" />
 		<p>
-			<strong>Please, verify the XML-file</strong>
+			<em>Step 3.</em> <strong>Validate</strong> the XML-file
 		</p>
 		<input type="submit" value="Validate" /><br />
 	</form>
 	<br>
-	<br>
-	
+
+	<p><em>Step 4.</em> <strong>Parse</strong> XML-file and send it <strong>to console.</strong></p>
+	<p>Please, select parser:</p>	
 	<form action="controller" method="get">
-		<input type="hidden" name="parce" value="SAX_parcing" />
-		<p> <strong>Parse XML-file and send it to console.</strong> </p>
-		<p> Please, select parser:</p>
-		
-		<input type="submit" value="SAX " /><br>
-	</form>
-	
-	<form action="controller" method="get">
-		<input type="hidden" name="parce" value="StAX_parcing" />
-		<br><input type="submit" value="StAX" /><br>
+		<input type="hidden" name="parce" value="SAX" />
+		<input type="submit" value="SAX " />
 	</form>
 
 	<form action="controller" method="get">
-		<input type="hidden" name="parce" value="DOM_parcing" />
-		<br><input type="submit" value="DOM" /><br>
+		<input type="hidden" name="parce" value="StAX" /> <br>
+		<input type="submit" value="StAX" /><br>
+	</form>
+
+	<form action="controller" method="get">
+		<input type="hidden" name="parce" value="DOM" /> <br>
+		<input type="submit" value="DOM" /><br>
 	</form>
 
 

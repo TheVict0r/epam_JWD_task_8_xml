@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
-import by.jwd.pravdivets.task8.xmlmobile.constants.Constants;
+import by.jwd.pravdivets.task8.xmlmobile.constants.FilePaths;
 import by.jwd.pravdivets.task8.xmlmobile.errorhandler.TariffsErrorHandler;
 
 import javax.xml.parsers.ParserConfigurationException;

@@ -37,6 +37,9 @@ public class TariffsValidator {
 	      //System.out.println("The end of the validation process");
 	    } catch (SAXException e) {
 	    	logger.error(fileName + " is not correct or valid. " + e.getMessage());
+	    	System.out.println(" получите SAXException e");
+	    	e.printStackTrace();
+	    	System.out.println(" получите SAXException e");
 	    	result = false;
 	    	
 	    } catch (IOException e) {
