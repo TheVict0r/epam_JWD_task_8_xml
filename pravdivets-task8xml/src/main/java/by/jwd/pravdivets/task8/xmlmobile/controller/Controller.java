@@ -19,11 +19,7 @@ import by.jwd.pravdivets.task8.xmlmobile.validator.TariffsValidator;
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	String language = FilePaths.LANGUAGE;
-    String fileName = FilePaths.fileName;
-    String schemaName = FilePaths.shemaName;
     private static Logger logger = LogManager.getLogger();
-    
     
 	public Controller() {
 		super();
@@ -39,7 +35,6 @@ public class Controller extends HttpServlet {
 		process(request, response);
 	}
 
-	
 	private void process(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		String language = FilePaths.LANGUAGE;
