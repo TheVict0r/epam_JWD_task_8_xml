@@ -1,4 +1,4 @@
-package by.jwd.pravdivets.task8.xmlmobile.sax2;
+package by.jwd.pravdivets.task8.xmlmobile.parsers;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,4 +1,4 @@
-package by.jwd.pravdivets.task8.xmlmobile.dom;
+package by.jwd.pravdivets.task8.xmlmobile.parsers;
 
 import java.io.IOException;
 import java.text.ParseException;

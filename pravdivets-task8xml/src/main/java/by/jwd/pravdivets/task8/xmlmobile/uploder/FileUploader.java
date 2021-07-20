@@ -81,10 +81,8 @@ public class FileUploader {
 
 	private void savePath(String fileType, String path) {
 		
-		path = path.replace('\\', File.separatorChar);
-		
-		System.out.println(path);
-		
+		path = path.replace('\\', '/');
+	
 		if ("XML".equals(fileType)) {
 			FilePaths.fileName = path;
 		} else if ("XSD".equals(fileType)) {

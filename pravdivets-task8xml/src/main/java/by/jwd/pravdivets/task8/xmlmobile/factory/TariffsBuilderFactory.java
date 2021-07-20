@@ -1,8 +1,8 @@
 package by.jwd.pravdivets.task8.xmlmobile.factory;
 
-import by.jwd.pravdivets.task8.xmlmobile.dom.TariffsDomBuilder;
-import by.jwd.pravdivets.task8.xmlmobile.sax2.TariffsSaxBuilder;
-import by.jwd.pravdivets.task8.xmlmobile.staxevent.TariffsStAXEventBuilder;
+import by.jwd.pravdivets.task8.xmlmobile.parsers.TariffsDomBuilder;
+import by.jwd.pravdivets.task8.xmlmobile.parsers.TariffsSaxBuilder;
+import by.jwd.pravdivets.task8.xmlmobile.parsers.TariffsStAXEventBuilder;
 
 public class TariffsBuilderFactory {
 

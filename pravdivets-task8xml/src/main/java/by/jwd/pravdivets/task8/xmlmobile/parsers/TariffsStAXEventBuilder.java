@@ -1,4 +1,4 @@
-package by.jwd.pravdivets.task8.xmlmobile.staxevent;
+package by.jwd.pravdivets.task8.xmlmobile.parsers;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
