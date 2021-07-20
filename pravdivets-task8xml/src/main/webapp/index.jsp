@@ -31,7 +31,7 @@ body {
 		<input type="hidden" name="uploadfile" value="XML" />
 		File: <input type="file" name="file" id="file" accept=".xml"/> 
 		<br /> Enter the destination folder: <input type="text" value="/folder" name="destination" />
-		<br /> <input type="submit" value="Upload" name="upload" id="upload" />
+		<br /> <input type="submit" value="Upload" name="upload"/>
 	</form>
 	<br/>
 
@@ -42,7 +42,7 @@ body {
 		<input type="hidden" name="uploadfile" value="XSD" />
 		File: <input type="file" name="file" id="file" accept=".xsd"/> 
 		<br /> Enter the destination folder: <input type="text" value="/folder" name="destination" />
-		<br /> <input type="submit" value="Upload" name="upload" id="upload" />
+		<br /> <input type="submit" value="Upload" name="upload"/>
 	</form>
 
 

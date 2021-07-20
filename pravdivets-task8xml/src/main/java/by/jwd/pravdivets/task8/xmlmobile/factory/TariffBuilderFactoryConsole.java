@@ -4,9 +4,10 @@ import by.jwd.pravdivets.task8.xmlmobile.service.TariffsListPrinter;
 
 public class TariffBuilderFactoryConsole {
 
-	public static void delieverTariffsToConsole(String fileName, String parcer) {
+	public void delieverTariffsToConsole(String fileName, String parcer) {
 		AbstractTariffsBuilder builder = TariffsBuilderFactory.createTariffsBuilder(parcer);
 		builder.buildListTariffs(fileName);
-		TariffsListPrinter.printTariffsFromList(builder.getTariffs());
+		TariffsListPrinter printer = new TariffsListPrinter();
+		printer.printTariffsFromList(builder.getTariffs());
 	}
 }

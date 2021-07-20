@@ -20,7 +20,7 @@ public class TariffsValidator {
 
 	private static Logger logger = LogManager.getLogger();
 	
-	public static boolean isValide(String language, String fileName, String schemaName) {
+	public boolean isValide(String language, String fileName, String schemaName) {
 		boolean result;
 		result = true;
 		SchemaFactory factory = SchemaFactory.newInstance(language);
@@ -37,9 +37,6 @@ public class TariffsValidator {
 	      //System.out.println("The end of the validation process");
 	    } catch (SAXException e) {
 	    	logger.error(fileName + " is not correct or valid. " + e.getMessage());
-	    	System.out.println(" получите SAXException e");
-	    	e.printStackTrace();
-	    	System.out.println(" получите SAXException e");
 	    	result = false;
 	    	
 	    } catch (IOException e) {

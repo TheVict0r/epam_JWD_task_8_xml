@@ -14,7 +14,7 @@ import by.jwd.pravdivets.task8.xmlmobile.entity.Tariff;
 
 public class TariffsListPrinter {
 
-	public static void printTariffsFromList(List<Tariff> tariffs) {
+	public void printTariffsFromList(List<Tariff> tariffs) {
 		
 		for( Tariff tariff: tariffs ) {
 			

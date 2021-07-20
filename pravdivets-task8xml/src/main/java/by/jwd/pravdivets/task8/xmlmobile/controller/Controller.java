@@ -57,10 +57,12 @@ public class Controller extends HttpServlet {
 				logger.error("Something wrong with the " + fileType + " file. " + e.getMessage());
 			}
 		} else if ("perform_validation".equals(validation)) {
-			boolean res = TariffsValidator.isValide(language, fileName, schemaName);
-		    System.out.println(res);
+			TariffsValidator validator = new TariffsValidator();
+			boolean res = validator.isValide(language, fileName, schemaName);
+		    System.out.println("Validation result is - " + res);
 		} else if ("SAX".equals(parcing) || "StAX".equals(parcing) || "DOM".equals(parcing)) {
-			TariffBuilderFactoryConsole.delieverTariffsToConsole(fileName, parcing);
+			TariffBuilderFactoryConsole builderFactoryConsole = new TariffBuilderFactoryConsole();
+			builderFactoryConsole.delieverTariffsToConsole(fileName, parcing);
 		}
 		
 	}
