@@ -1,6 +1,8 @@
 package by.jwd.pravdivets.task8.xmlmobile.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +20,7 @@ import by.jwd.pravdivets.task8.xmlmobile.validator.TariffsValidator;
 @MultipartConfig
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	
     private static Logger logger = LogManager.getLogger();
     
 	public Controller() {
@@ -42,6 +44,7 @@ public class Controller extends HttpServlet {
 	    String schemaName = FilePaths.shemaName;
 		
 		response.setContentType("text/html");
+		final PrintWriter writer = response.getWriter();
 		
 		String validation = request.getParameter("validate");
 		String parcing = request.getParameter("parce");
@@ -56,13 +59,18 @@ public class Controller extends HttpServlet {
 			} catch ( IOException e) {
 				logger.error("Something wrong with the " + fileType + " file. " + e.getMessage());
 			}
+		
 		} else if ("perform_validation".equals(validation)) {
 			TariffsValidator validator = new TariffsValidator();
 			boolean res = validator.isValide(language, fileName, schemaName);
-		    System.out.println("Validation result is - " + res);
+			writer.print("Validation result is - " + res);
+			writer.print("<br>Please, press <strong>Back</strong> button of your web-browser");
+		
 		} else if ("SAX".equals(parcing) || "StAX".equals(parcing) || "DOM".equals(parcing)) {
 			TariffBuilderFactoryConsole builderFactoryConsole = new TariffBuilderFactoryConsole();
 			builderFactoryConsole.delieverTariffsToConsole(fileName, parcing);
+			writer.print("The file was parsed with <strong>" + parcing + "</strong> parser. See IDE's console for the results.");
+			writer.print("<br>Please, press <strong>Back</strong> button of your web-browser");
 		}
 		
 	}

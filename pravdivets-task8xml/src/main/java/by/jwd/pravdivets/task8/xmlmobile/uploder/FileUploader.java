@@ -47,6 +47,7 @@ public class FileUploader {
 				out.write(bytes, 0, read);
 			}
 			writer.println("New file " + fileName + " created at " + path);
+			writer.print("<br>Please, press <strong>Back</strong> button of your web-browser");
 			logger.info("File {0} being uploaded to {1}", new Object[] { fileName, path });
 
 		} catch (FileNotFoundException fne) {
