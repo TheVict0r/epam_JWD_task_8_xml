@@ -22,6 +22,7 @@ public enum TariffXmlTag {
 	MESSAGES("messages"),
 	SMS("SMS"),
 	MMS("MMS");
+
 	
 	private String value;
 

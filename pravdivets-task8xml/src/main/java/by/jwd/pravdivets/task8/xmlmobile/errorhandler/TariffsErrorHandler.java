@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
+
 public class TariffsErrorHandler implements ErrorHandler {
     private static Logger logger = LogManager.getLogger();
     

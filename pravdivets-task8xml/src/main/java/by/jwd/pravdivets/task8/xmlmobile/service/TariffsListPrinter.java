@@ -7,7 +7,6 @@ import java.util.Locale;
 
 import by.jwd.pravdivets.task8.xmlmobile.entity.Tariff;
 
-
 /*
  * Можно печатать и через toString класса Tariff, 
  * но решил сделать ещё и в виде форматированной таблицы
