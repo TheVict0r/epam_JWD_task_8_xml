@@ -18,7 +18,7 @@ import by.jwd.pravdivets.task8.xmlmobile.errorhandler.TariffsErrorHandler;
 
 public class TariffsValidator {
 
-	private static Logger logger = LogManager.getLogger();
+	private static Logger logger = LogManager.getLogger(TariffsValidator.class);
 	
 	public boolean isValide(String language, String fileName, String schemaName) {
 		boolean result;
